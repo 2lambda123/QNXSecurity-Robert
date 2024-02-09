@@ -1,6 +1,5 @@
 
 import os
-import random
 import sys
 
 from ctypes import *
@@ -8,6 +7,7 @@ import glob
 import shutil
 
 from util import *
+import secrets
 
 # Script for fuzzing IPC endpoints on QNX
 # Uses /dev/name/local to get endpoints
@@ -77,12 +77,12 @@ class IPCFuzz:
 			print(coid)
 
 	def random_endpoint(self):
-		endpoint = random.choice(self.endpoints)
+		endpoint = secrets.SystemRandom().choice(self.endpoints)
 		print("endpoint selected = ", endpoint)
 		return endpoint
 
 	def random_coid(self):
-		coid = random.choice(self.coids)
+		coid = secrets.SystemRandom().choice(self.coids)
 		print("coid selected = ", coid[0])
 		print("endpoint = ", coid[1])
 		return coid
@@ -143,7 +143,7 @@ class IPCFuzz:
 		high = 0x9000
 
 		x = ClientMsg()
-		x.msg_no = random.randint(low,high)
+		x.msg_no = secrets.SystemRandom().randint(low,high)
 		self.libc.memset(x.buffer,0x44,1024)
 		self.send_sync(coid,x,data_len)
 
@@ -174,9 +174,9 @@ class IPCFuzz:
 		fd.close()
 
 	def fuzz_pulse(self,coid):
-		code = random.randint(0,127)
+		code = secrets.SystemRandom().randint(0,127)
 		print ("Pulse code = ", code)
-		value = random.randint(0,127)
+		value = secrets.SystemRandom().randint(0,127)
 		ret = self.libc.MsgSendPulse(coid,0,code,value)
 		print("Pulse ret = ", ret)
 		if ret != -1:
@@ -189,7 +189,7 @@ class IPCFuzz:
 
 		while True:
 			# Filename for the testcase to be saved to.
-			self.fn = str(random.randint(0,0xffffff))
+			self.fn = str(secrets.SystemRandom().randint(0,0xffffff))
 
 			if name == None:
 				coid = self.random_coid()	
