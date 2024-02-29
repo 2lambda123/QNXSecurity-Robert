@@ -3,8 +3,8 @@
 ## Tech Stack
 2lambda123/QNXSecurity-Robert is built on the following main stack:
 
-- [Python](https://www.python.org) – Languages
 - [C lang](http://en.wikipedia.org/wiki/C_(programming_language)) – Languages
+- [Python](https://www.python.org) – Languages
 - [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
 
 Full tech stack [here](/techstack.md)
@@ -15,8 +15,8 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 2lambda123/QNXSecurity-Robert is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/993/pUBY5pVj.png' alt='Python'/> [Python](https://www.python.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='C lang'/> [C lang](http://en.wikipedia.org/wiki/C_(programming_language)) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/993/pUBY5pVj.png' alt='Python'/> [Python](https://www.python.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png' alt='Shell'/> [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
 
 Full tech stack [here](/techstack.md)
@@ -28,7 +28,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [2lambda123/QNXSecurity-Robert](https://github.com/2lambda123/QNXSecurity-Robert)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|4<br/>Tools used|01/09/24 <br/>Report generated|
+|4<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
